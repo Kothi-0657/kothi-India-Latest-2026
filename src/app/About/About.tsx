@@ -5,9 +5,9 @@ function About() {
     <section className="py-20 bg-gradient-to-r from-gray-50 via-white to-gray-100 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
         
-        <div className="space-y-6">
+        <div className="space-y-9">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-            About{" "}
+            About{"   "}
             <span className="text-[#b04400] font-extrabold navbar-logo">
               Kothi India
             </span>
@@ -33,11 +33,11 @@ function About() {
 
     
         <div className="hidden lg:flex justify-center md:justify-end">
-          <div className="bg-white p-4 rounded-3xl shadow-xl">
+          <div className="bg-offwhite p-0.1 rounded-3xl shadow-xl">
             <img
               src="/kothi.png"
               alt="Company Building"
-              className="rounded-2xl w-full max-w-md hover:scale-105 transition-transform duration-500"
+              className="rounded-2xl w-full max-w-md hover:scale-165 transition-transform duration-200"
             />
           </div>
         </div>

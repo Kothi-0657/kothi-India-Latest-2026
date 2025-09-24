@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,28154,e=>{"use strict";e.s(["default",()=>n],28154);var r=e.i(30075),i=e.i(54764);let t=function(){return(0,r.jsx)("div",{children:"profile"})};function n(){return(0,r.jsx)(r.Fragment,{children:(0,r.jsx)(i.AppProviders,{children:(0,r.jsx)(t,{})})})}}]);

@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,1020,e=>{"use strict";e.s(["default",()=>o]);var t=e.i(9557),u=e.i(90458),l=e.i(54853);function o(){let e=(0,l.useAppSelector)(e=>e.auth.token),o=(0,u.useRouter)();return(0,t.useEffect)(()=>{null===e&&o.replace("/auth")},[e,o]),null}}]);

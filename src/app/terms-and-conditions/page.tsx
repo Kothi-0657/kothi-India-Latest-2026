@@ -4,7 +4,7 @@ export default function TermsPage() {
       <h1 className="text-3xl font-bold mb-4">Terms & Conditions</h1>
       <p>      
 Effective Date: June 2025
-Welcome to Kothi India. These Terms and Conditions ("Terms") govern your use of our services and website. By engaging with Kothi India, you agree to abide by these terms.
+Welcome to Kothi India. These Terms and Conditions (&Quot;Terms&quot;) govern your use of our services and website. By engaging with Kothi India, you agree to abide by these terms.
 
 <p>1. Services Offered
 Kothi India provides the following professional services:
@@ -22,7 +22,7 @@ Kothi India reserves the right to reschedule or cancel a booking in case of unav
 <p>
 3. Pricing & Payment
 Pricing is provided via quote after inspection or discussion. All quotes are valid for 15 days unless otherwise stated.
-A minimum advance payment (usually 50–70%) may be required to confirm the booking.
+A minimum advance payment usually 50% to 70% may be required to confirm the booking.
 Full payment must be completed as per the mutually agreed milestones.
 All payments are to be made through authorized modes: bank transfer, UPI, or payment links.
 Any taxes or government levies applicable will be added to the final invoice.
@@ -37,7 +37,7 @@ Kothi India holds the right to deduct administrative or material costs already i
 <p> 
 5. Client Responsibilities
 Clients must provide accurate project information, access to the site, and ensure a safe working environment.
-Any delays caused due to client's inaccessibility, pending approvals, or unavailability will affect project timelines.
+Any delays caused due to client&apos;s inaccessibility, pending approvals, or unavailability will affect project timelines.
 If materials are provided by the client, Kothi India is not liable for their quality or compatibility.
 </p>
 <p>

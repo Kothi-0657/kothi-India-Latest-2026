@@ -3,7 +3,7 @@ export default function Privacy() {
     <div className="p-10 max-w-4xl mx-auto text-gray-800">
       <h1 className="text-3xl font-bold mb-4">Terms & Conditions</h1>
       <p className="mt-4">
-       Here's a comprehensive Privacy Policy tailored for Kothi India, a service provider dealing in home construction, renovation, and related services:</p>
+       Here&apos;s a comprehensive Privacy Policy tailored for Kothi India, a service provider dealing in home construction, renovation, and related services:</p>
 <p>
 🔒 Privacy Policy
 Effective Date: June 2025</p><p>
@@ -68,7 +68,7 @@ Request data deletion (subject to legal or contractual obligations)</p>
 7. Third-Party Links</p><p>
 Our website may contain links to third-party websites like Instagram, Facebook, WhatsApp, etc. We are not responsible for the content or privacy practices of those sites.</p><p>
 </p>
-8. Children’s Privacy<p>
+8. Children&Apos;s Privacy<p>
 Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from minors. If we learn that we have collected such data, we will delete it promptly.
 </p><p>
 9. Policy Updates</p><p>
