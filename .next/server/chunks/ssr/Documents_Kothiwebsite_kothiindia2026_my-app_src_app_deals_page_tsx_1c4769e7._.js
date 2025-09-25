@@ -10,7 +10,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/node_modules/react-icons/fa/index.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$app$2f$component$2f$PopupBox$2f$popup$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/PopupBox/popup.tsx [app-ssr] (ecmascript)"); // ✅ fixed import
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$app$2f$component$2f$PopupBox$2f$popup$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/PopupBox/popup.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -96,7 +96,11 @@ function DealsPage() {
                 throw new Error(result.message || "Something went wrong");
             }
         } catch (err) {
-            setError(err.message);
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError("Unexpected error occurred");
+            }
         } finally{
             setLoading(false);
         }
@@ -121,7 +125,7 @@ function DealsPage() {
                                         children: "🏗 Constructions Plans"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -134,18 +138,18 @@ function DealsPage() {
                                             className: "object-contain"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                            lineNumber: 82,
+                                            lineNumber: 86,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                lineNumber: 77,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -160,7 +164,7 @@ function DealsPage() {
                                                         className: "text-red-500 text-xl"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                        lineNumber: 99,
+                                                        lineNumber: 103,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -168,13 +172,13 @@ function DealsPage() {
                                                         children: plan.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                        lineNumber: 100,
+                                                        lineNumber: 104,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                lineNumber: 98,
+                                                lineNumber: 102,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -182,18 +186,18 @@ function DealsPage() {
                                                 children: plan.price
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 106,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, index, true, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 98,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                lineNumber: 92,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -201,13 +205,13 @@ function DealsPage() {
                                 children: "All India Service Available"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                lineNumber: 109,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -221,7 +225,7 @@ function DealsPage() {
                                         children: "🎨 Painting Plans"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 121,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -234,18 +238,18 @@ function DealsPage() {
                                             className: "object-contain"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                            lineNumber: 121,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 124,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -259,7 +263,7 @@ function DealsPage() {
                                                 children: "Sale"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                lineNumber: 133,
+                                                lineNumber: 137,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -267,7 +271,7 @@ function DealsPage() {
                                                 children: "Re-Painting"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 138,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -275,13 +279,13 @@ function DealsPage() {
                                                 children: "Cleaning"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 139,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 136,
                                         columnNumber: 13
                                     }, this),
                                     paintingPlans.map((plan, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -292,7 +296,7 @@ function DealsPage() {
                                                     children: plan.type
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                    lineNumber: 143,
+                                                    lineNumber: 147,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -300,7 +304,7 @@ function DealsPage() {
                                                     children: plan.price
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 148,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -310,24 +314,24 @@ function DealsPage() {
                                                         children: plan.cleaning
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                        lineNumber: 146,
+                                                        lineNumber: 150,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 149,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 143,
                                             columnNumber: 15
                                         }, this))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                lineNumber: 131,
+                                lineNumber: 135,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -343,29 +347,29 @@ function DealsPage() {
                                         className: "mx-auto cursor-pointer hover:scale-105 transition-transform"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 161,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 160,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 159,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                        lineNumber: 115,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                lineNumber: 74,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$app$2f$component$2f$PopupBox$2f$popup$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -379,7 +383,7 @@ function DealsPage() {
                             children: "Request a callback"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                            lineNumber: 172,
+                            lineNumber: 176,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -387,7 +391,7 @@ function DealsPage() {
                             children: "Fill the form below and our team will contact you."
                         }, void 0, false, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                            lineNumber: 175,
+                            lineNumber: 179,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -402,7 +406,7 @@ function DealsPage() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 180,
+                                    lineNumber: 184,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -413,7 +417,7 @@ function DealsPage() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 191,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -423,7 +427,7 @@ function DealsPage() {
                                     className: "w-full p-3 border rounded-lg"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 198,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -433,7 +437,7 @@ function DealsPage() {
                                     className: "w-full p-3 border rounded-lg"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 204,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -443,7 +447,7 @@ function DealsPage() {
                                     rows: 4
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 206,
+                                    lineNumber: 210,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -453,7 +457,7 @@ function DealsPage() {
                                     rows: 4
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 212,
+                                    lineNumber: 216,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -463,13 +467,13 @@ function DealsPage() {
                                     children: loading ? "Submitting..." : "Submit"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                                    lineNumber: 218,
+                                    lineNumber: 222,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                            lineNumber: 179,
+                            lineNumber: 183,
                             columnNumber: 11
                         }, this),
                         success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -477,7 +481,7 @@ function DealsPage() {
                             children: "✅ Form submitted successfully! Closing..."
                         }, void 0, false, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                            lineNumber: 228,
+                            lineNumber: 232,
                             columnNumber: 13
                         }, this),
                         error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -488,24 +492,24 @@ function DealsPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                            lineNumber: 233,
+                            lineNumber: 237,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                    lineNumber: 171,
+                    lineNumber: 175,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-                lineNumber: 170,
+                lineNumber: 174,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/deals/page.tsx",
-        lineNumber: 70,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 }

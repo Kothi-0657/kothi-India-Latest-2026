@@ -1,18 +1,18 @@
 {
   "pages": {
     "/user/purchasehistory/page": [
-      "static/chunks/fe2e729ff12fe2f9.js",
+      "static/chunks/bc13f05b878297f2.js",
       "static/chunks/faaa8f0a61558b3c.js",
-      "static/chunks/b161a796fd682bfd.js",
-      "static/chunks/eb278ffedac868f8.js",
-      "static/chunks/703a541b6fa2e6d4.css",
-      "static/chunks/f36dab9c5420a609.js",
-      "static/chunks/5586f48583dcb847.js",
-      "static/chunks/fdab34e0fc57c733.js",
+      "static/chunks/ec036acfc77c23a8.js",
+      "static/chunks/ae2b4b660b14a3fc.js",
+      "static/chunks/12d7478f97aec539.css",
+      "static/chunks/9bbe0c12cfdba254.js",
+      "static/chunks/e22a95122bb8d25d.js",
+      "static/chunks/27698906a79d7c86.js",
+      "static/chunks/10f3800c85da9844.js",
       "static/chunks/b6faa7f2ac435b16.js",
       "static/chunks/413290b290f601b7.js",
-      "static/chunks/8a2a4636cc15ee9e.js",
-      "static/chunks/turbopack-d55e97f8cc4dffc5.js"
+      "static/chunks/turbopack-9be30480e283067c.js"
     ]
   }
 }

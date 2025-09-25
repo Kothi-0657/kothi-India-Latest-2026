@@ -1,25 +1,18 @@
 {
   "pages": {
     "/servicedetails/page": [
-      "static/chunks/f09e5_next_77b577dd._.js",
-      "static/chunks/f09e5_react-icons_fa_index_mjs_1ba65faf._.js",
-      "static/chunks/f09e5_react-icons_lib_42a3405a._.js",
-      "static/chunks/f09e5_7aec843e._.js",
-      "static/chunks/Documents_Kothiwebsite_kothiindia2026_my-app_src_b8a684cd._.js",
-      "static/chunks/[root-of-the-server]__2a4a19a1._.css",
-      "static/chunks/Documents_Kothiwebsite_kothiindia2026_my-app_src_app_layout_tsx_b236a10b._.js",
-      "static/chunks/f09e5_next_dist_client_components_builtin_global-error_99be586e.js",
-      "static/chunks/Documents_Kothiwebsite_kothiindia2026_my-app_src_app_18ab5458._.js",
-      "static/chunks/80b94_Kothiwebsite_kothiindia2026_my-app_src_app_servicedetails_page_tsx_99be586e._.js",
-      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_a58d1e74._.js",
-      "static/chunks/f09e5_next_dist_compiled_react-dom_f4e17d7f._.js",
-      "static/chunks/f09e5_next_dist_compiled_next-devtools_index_30c79d34.js",
-      "static/chunks/f09e5_next_dist_compiled_45b331c2._.js",
-      "static/chunks/f09e5_next_dist_client_3897c585._.js",
-      "static/chunks/f09e5_next_dist_3409aa74._.js",
-      "static/chunks/f09e5_@swc_helpers_cjs_4cd7e11e._.js",
-      "static/chunks/Documents_Kothiwebsite_kothiindia2026_my-app_a0ff3932._.js",
-      "static/chunks/turbopack-Documents_Kothiwebsite_kothiindia2026_my-app_805c1c5b._.js"
+      "static/chunks/bc13f05b878297f2.js",
+      "static/chunks/faaa8f0a61558b3c.js",
+      "static/chunks/ec036acfc77c23a8.js",
+      "static/chunks/ae2b4b660b14a3fc.js",
+      "static/chunks/12d7478f97aec539.css",
+      "static/chunks/7b9865cb4ad437e7.js",
+      "static/chunks/e22a95122bb8d25d.js",
+      "static/chunks/27698906a79d7c86.js",
+      "static/chunks/10f3800c85da9844.js",
+      "static/chunks/b6faa7f2ac435b16.js",
+      "static/chunks/413290b290f601b7.js",
+      "static/chunks/turbopack-9be30480e283067c.js"
     ]
   }
 }

@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaSignInAlt, FaChevronUp, FaChevronDown } from "react-icons/fa";
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "@/app/globals.css";
 import Popup from "../PopupBox/popup";
 import { useAppSelector } from "@/Redux/store";
-import UserMenu from "@/app/user/component/Profilelist";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +44,7 @@ function Navbar() {
 
     try {
       const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec", // ✅ USE /exec
+        "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec",
         {
           method: "POST",
           body: JSON.stringify(data),
@@ -69,8 +68,12 @@ function Navbar() {
       } else {
         throw new Error(result.message || "Something went wrong");
       }
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Something went wrong");
+      }
     } finally {
       setLoading(false);
     }

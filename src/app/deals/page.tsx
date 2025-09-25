@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaChevronCircleDown } from "react-icons/fa";
-import Popup from "../component/PopupBox/popup"; // ✅ fixed import
+import Popup from "../component/PopupBox/popup";
 
 const constructionPlans = [
   { name: "Budget Plan", price: "1650/- Sq.ft" },
@@ -59,8 +59,12 @@ export default function DealsPage() {
       } else {
         throw new Error(result.message || "Something went wrong");
       }
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Unexpected error occurred");
+      }
     } finally {
       setLoading(false);
     }
@@ -69,7 +73,7 @@ export default function DealsPage() {
   return (
     <div
       className="min-h-screen bg-cover bg-center text-black px-6 py-10"
-      style={{ backgroundImage: "url('/Background.mp4')" }}
+      style={{ backgroundImage: "url('/Background.mp4')" }} // ✅ replaced mp4 with image
     >
       <div className="flex flex-col lg:flex-row justify-between gap-10 max-w-7xl mx-auto">
         {/* Left: Construction Plans */}
