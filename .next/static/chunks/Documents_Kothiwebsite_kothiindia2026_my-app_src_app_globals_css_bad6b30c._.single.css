@@ -1746,6 +1746,10 @@
     color: var(--color-green-500);
   }
 
+  .text-green-600 {
+    color: var(--color-green-600);
+  }
+
   .text-orange-500 {
     color: var(--color-orange-500);
   }

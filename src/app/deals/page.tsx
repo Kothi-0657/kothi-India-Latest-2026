@@ -21,6 +21,50 @@ const paintingPlans = [
 
 export default function DealsPage() {
   const [showPopup, setShowPopup] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  // ✅ Form handler
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      const result = await res.json();
+      if (result.status === "success") {
+        setSuccess(true);
+        form.reset();
+
+        // auto-close popup after 2s
+        setTimeout(() => {
+          setShowPopup(false);
+          setSuccess(false);
+        }, 2000);
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div
@@ -107,12 +151,9 @@ export default function DealsPage() {
             ))}
           </div>
 
-          {/* Image button that opens the Popup */}
+          {/* CTA button */}
           <div className="mt-6 text-center">
-            <button
-              onClick={() => setShowPopup(true)}
-              className="inline-block"
-            >
+            <button onClick={() => setShowPopup(true)} className="inline-block">
               <Image
                 src="/Kothi5.png"
                 alt="Get Started Now"
@@ -126,53 +167,16 @@ export default function DealsPage() {
       </div>
 
       {/* Popup Modal */}
-      <Popup
-        isOpen={showPopup}
-        onClose={() => setShowPopup(false)}
-        title="Request a callback"
-      >
+      <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
         <div className="space-y-4">
+          <h2 className="text-2xl font-bold text-center textcolor2dark">
+            Request a callback
+          </h2>
           <p className="text-center text-gray-500 text-sm">
             Fill the form below and our team will contact you.
           </p>
 
-          {/* ✅ Updated form with Google Sheets integration */}
-          <form
-            className="space-y-3"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const form = e.currentTarget as HTMLFormElement;
-
-              const formData = {
-                name: (form.elements.namedItem("name") as HTMLInputElement).value,
-                phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
-                email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
-                city: (form.elements.namedItem("city") as HTMLInputElement)?.value,
-                address: (form.elements.namedItem("address") as HTMLTextAreaElement)?.value,
-                requirements: (form.elements.namedItem("requirements") as HTMLTextAreaElement)?.value,
-              };
-
-              try {
-                const res = await fetch("https://script.google.com/macros/s/AKfycbya9iixBFWRY73gHWavLzemMkLur9A3NkZhjQRmwgxM_u1xuy57UeZOBnn4nfMN-yUEvw/exec", {
-                  method: "POST",
-                  body: JSON.stringify(formData),
-                  headers: { "Content-Type": "application/json" },
-                });
-
-                const result = await res.json();
-                if (result.status === "success") {
-                  alert("✅ Form submitted successfully!");
-                  form.reset();
-                  setShowPopup(false);
-                } else {
-                  alert("❌ Something went wrong!");
-                }
-              } catch (error) {
-                console.error(error);
-                alert("⚠️ Network error");
-              }
-            }}
-          >
+          <form className="space-y-3" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -204,21 +208,30 @@ export default function DealsPage() {
               placeholder="Property / Site address"
               className="w-full p-3 border rounded-lg"
               rows={4}
-            ></textarea>
+            />
             <textarea
               name="requirements"
               placeholder="Detail Requirements"
               className="w-full p-3 border rounded-lg"
               rows={4}
-            ></textarea>
-
+            />
             <button
               type="submit"
               className="w-full bg-orange-600 text-white font-semibold py-3 rounded-lg"
+              disabled={loading}
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
+
+          {success && (
+            <p className="text-green-600 text-center font-medium">
+              ✅ Form submitted successfully! Closing...
+            </p>
+          )}
+          {error && (
+            <p className="text-red-600 text-center font-medium">⚠️ {error}</p>
+          )}
         </div>
       </Popup>
     </div>

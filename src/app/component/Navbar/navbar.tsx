@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaSignInAlt, FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "@/app/globals.css";
-import Popup from "../PopupBox/popup"; // ✅ default import
+import Popup from "../PopupBox/popup";
 import { useAppSelector } from "@/Redux/store";
 import UserMenu from "@/app/user/component/Profilelist";
 
@@ -13,6 +13,9 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const token = useAppSelector((state) => state.auth.token);
 
@@ -29,9 +32,53 @@ function Navbar() {
     }
   };
 
+  // ✅ Form submission handler
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec", // ✅ USE /exec
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const result = await res.json();
+
+      if (result.status === "success") {
+        setSuccess(true);
+        form.reset();
+
+        // Auto close modal after 2s
+        setTimeout(() => {
+          setShowPopup(false);
+          setSuccess(false);
+        }, 2000);
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
-      {/* Navbar Wrapper */}
+      {/* Navbar */}
       <div className="fixed top-0 left-0 w-full z-50 backgroundcolor">
         <div className="flex items-center justify-between px-6 md:px-16 lg:py-2 py-5">
           {/* Logo */}
@@ -55,8 +102,6 @@ function Navbar() {
                 </Link>
               </li>
             ))}
-
-            {/* Contact button */}
             <li>
               <button
                 onClick={() => setShowPopup(true)}
@@ -67,22 +112,7 @@ function Navbar() {
             </li>
           </ul>
 
-          {/* Auth / Book Button */}
-          {/*<div className="hidden lg:block">
-            {token ? (
-              <UserMenu />
-            ) : (
-              <Link
-                href="/auth"
-                className="px-4 py-2 flex items-center gap-2 bg-white text-[#b04400] font-semibold rounded hover:bg-gray-100 transition"
-              >
-                Book Now
-                <FaSignInAlt size={18} />
-              </Link>
-            )}
-          </div>*/}
-
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
             className="lg:hidden text-white relative w-8 h-8"
             onClick={() => setIsOpen(!isOpen)}
@@ -105,10 +135,9 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile menu */}
         {isOpen && (
           <ul className="flex flex-col gap-4 px-6 pb-4 font-medium text-white lg:hidden">
-            {/* Profile */}
             {token && (
               <li>
                 <button
@@ -120,8 +149,6 @@ function Navbar() {
                 </button>
               </li>
             )}
-
-            {/* Navigation Items */}
             {navItems.map((navItem, index) => (
               <li key={index}>
                 <Link
@@ -133,8 +160,6 @@ function Navbar() {
                 </Link>
               </li>
             ))}
-
-            {/* Contact */}
             <li>
               <button
                 onClick={() => {
@@ -160,13 +185,7 @@ function Navbar() {
             Fill the form below and our team will contact you.
           </p>
 
-          {/* ✅ Google Sheet Form */}
-          <form
-            className="space-y-3"
-            action="YOUR_GOOGLE_APPS_SCRIPT_URL"
-            method="POST"
-            target="_blank"
-          >
+          <form className="space-y-3" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -198,20 +217,32 @@ function Navbar() {
               placeholder="Property / Site address"
               className="w-full p-3 border rounded-lg backgroundcolorfocus"
               rows={4}
-            ></textarea>
+            />
             <textarea
               name="requirements"
               placeholder="Detail Requirements"
               className="w-full p-3 border rounded-lg backgroundcolorfocus"
               rows={4}
-            ></textarea>
+            />
             <button
               type="submit"
               className="w-full backgroundcolor2 text-white font-semibold py-3 rounded-lg backgroundcolor2hover transition-all"
+              disabled={loading}
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
+
+          {success && (
+            <p className="text-green-600 text-center font-medium">
+              ✅ Form submitted successfully! Closing...
+            </p>
+          )}
+          {error && (
+            <p className="text-red-600 text-center font-medium">
+              ⚠️ {error}
+            </p>
+          )}
         </div>
       </Popup>
     </>

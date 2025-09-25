@@ -250,7 +250,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$app$2f$component$2f$PopupBox$2f$popup$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/PopupBox/popup.tsx [app-client] (ecmascript)"); // ✅ default import
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$app$2f$component$2f$PopupBox$2f$popup$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/PopupBox/popup.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$Redux$2f$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/Redux/store.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -267,6 +267,9 @@ function Navbar() {
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [showPopup, setShowPopup] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isProfileOpen, setIsProfileOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [success, setSuccess] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const token = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$Redux$2f$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAppSelector"])({
         "Navbar.useAppSelector[token]": (state)=>state.auth.token
     }["Navbar.useAppSelector[token]"]);
@@ -290,6 +293,41 @@ function Navbar() {
             setShowPopup(true);
         }
     };
+    // ✅ Form submission handler
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        setLoading(true);
+        setSuccess(false);
+        setError("");
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        try {
+            const res = await fetch("https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const result = await res.json();
+            if (result.status === "success") {
+                setSuccess(true);
+                form.reset();
+                // Auto close modal after 2s
+                setTimeout(()=>{
+                    setShowPopup(false);
+                    setSuccess(false);
+                }, 2000);
+            } else {
+                throw new Error(result.message || "Something went wrong");
+            }
+        } catch (err) {
+            setError(err.message);
+        } finally{
+            setLoading(false);
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -309,7 +347,7 @@ function Navbar() {
                                         alt: "brandlogo"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 86,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -317,13 +355,13 @@ function Navbar() {
                                         children: "Kothi INDIA"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                lineNumber: 38,
+                                lineNumber: 85,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -337,12 +375,12 @@ function Navbar() {
                                                 children: navItem.tab
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                                lineNumber: 49,
+                                                lineNumber: 96,
                                                 columnNumber: 17
                                             }, this)
                                         }, index, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                            lineNumber: 48,
+                                            lineNumber: 95,
                                             columnNumber: 15
                                         }, this)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -352,18 +390,18 @@ function Navbar() {
                                             children: "Contact"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 106,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 60,
+                                        lineNumber: 105,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                lineNumber: 46,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -374,33 +412,33 @@ function Navbar() {
                                         className: "block w-6 h-0.5 bg-white absolute top-2 left-1/2 -translate-x-1/2 transition-all ".concat(isOpen ? "rotate-45 translate-y-2" : "")
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 120,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "block w-6 h-0.5 bg-white absolute top-4 left-1/2 -translate-x-1/2 transition-all ".concat(isOpen ? "opacity-0" : "")
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 125,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "block w-6 h-0.5 bg-white absolute top-6 left-1/2 -translate-x-1/2 transition-all ".concat(isOpen ? "-rotate-45 -translate-y-2" : "")
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 130,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                lineNumber: 86,
+                                lineNumber: 116,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                        lineNumber: 36,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, this),
                     isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -415,27 +453,27 @@ function Navbar() {
                                             children: "Profile"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 147,
                                             columnNumber: 19
                                         }, this),
                                         isProfileOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronUp"], {}, void 0, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 148,
                                             columnNumber: 36
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaChevronDown"], {}, void 0, false, {
                                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                            lineNumber: 119,
+                                            lineNumber: 148,
                                             columnNumber: 54
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 143,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                lineNumber: 113,
+                                lineNumber: 142,
                                 columnNumber: 15
                             }, this),
                             navItems.map((navItem, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -446,12 +484,12 @@ function Navbar() {
                                         children: navItem.tab
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                        lineNumber: 127,
+                                        lineNumber: 154,
                                         columnNumber: 17
                                     }, this)
                                 }, index, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 153,
                                     columnNumber: 15
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -464,24 +502,24 @@ function Navbar() {
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 164,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                lineNumber: 138,
+                                lineNumber: 163,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                        lineNumber: 110,
+                        lineNumber: 140,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                lineNumber: 35,
+                lineNumber: 82,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$app$2f$component$2f$PopupBox$2f$popup$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -495,7 +533,7 @@ function Navbar() {
                             children: "Request a callback"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                            lineNumber: 156,
+                            lineNumber: 181,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -503,14 +541,12 @@ function Navbar() {
                             children: "Fill the form below and our team will contact you."
                         }, void 0, false, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                            lineNumber: 159,
+                            lineNumber: 184,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                             className: "space-y-3",
-                            action: "YOUR_GOOGLE_APPS_SCRIPT_URL",
-                            method: "POST",
-                            target: "_blank",
+                            onSubmit: handleSubmit,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "text",
@@ -520,7 +556,7 @@ function Navbar() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 189,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -531,7 +567,7 @@ function Navbar() {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 177,
+                                    lineNumber: 196,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -541,7 +577,7 @@ function Navbar() {
                                     className: "w-full p-3 border rounded-lg backgroundcolorfocus"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 184,
+                                    lineNumber: 203,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -551,7 +587,7 @@ function Navbar() {
                                     className: "w-full p-3 border rounded-lg backgroundcolorfocus"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 209,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -561,7 +597,7 @@ function Navbar() {
                                     rows: 4
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 196,
+                                    lineNumber: 215,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -571,39 +607,59 @@ function Navbar() {
                                     rows: 4
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 221,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     type: "submit",
                                     className: "w-full backgroundcolor2 text-white font-semibold py-3 rounded-lg backgroundcolor2hover transition-all",
-                                    children: "Submit"
+                                    disabled: loading,
+                                    children: loading ? "Submitting..." : "Submit"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                                    lineNumber: 208,
+                                    lineNumber: 227,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                            lineNumber: 164,
+                            lineNumber: 188,
                             columnNumber: 11
+                        }, this),
+                        success && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-green-600 text-center font-medium",
+                            children: "✅ Form submitted successfully! Closing..."
+                        }, void 0, false, {
+                            fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
+                            lineNumber: 237,
+                            columnNumber: 13
+                        }, this),
+                        error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-red-600 text-center font-medium",
+                            children: [
+                                "⚠️ ",
+                                error
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
+                            lineNumber: 242,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                    lineNumber: 155,
+                    lineNumber: 180,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/Kothiwebsite/kothiindia2026/my-app/src/app/component/Navbar/navbar.tsx",
-                lineNumber: 154,
+                lineNumber: 179,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(Navbar, "kYHUi2aTwd6oeILCU7l/lTuM1Uo=", false, function() {
+_s(Navbar, "h67PBbYuPwgZZjdzHAr9QqTkuto=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Kothiwebsite$2f$kothiindia2026$2f$my$2d$app$2f$src$2f$Redux$2f$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAppSelector"]
     ];

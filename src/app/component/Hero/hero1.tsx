@@ -50,7 +50,7 @@ function Hero1() {
       form.append("address", formData.address);
 
       const response = await fetch(
-        "YOUR_GOOGLE_SCRIPT_WEB_APP_URL", // 🔗 Replace with deployed Web App URL
+        "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec", // 🔗 Replace with deployed Web App URL
         {
           method: "POST",
           body: form,

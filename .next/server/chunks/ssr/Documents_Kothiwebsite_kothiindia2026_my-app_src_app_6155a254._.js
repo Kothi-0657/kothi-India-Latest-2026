@@ -171,7 +171,7 @@ function Hero1() {
             form.append("phone", formData.phone);
             form.append("email", formData.email);
             form.append("address", formData.address);
-            const response = await fetch("YOUR_GOOGLE_SCRIPT_WEB_APP_URL", {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec", {
                 method: "POST",
                 body: form
             });

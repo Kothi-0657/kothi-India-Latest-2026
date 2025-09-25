@@ -33,7 +33,7 @@ function Footer() {
               <FaLinkedin />
             </a>
             <a
-              href="https://www.facebook.com/people/Kothi-India/pfbid02CCE9useJhATMyPCYWYcWtvX9GaiaSrxAsiGdzyTeE8q6jWQQ6Jx5Leke4G8EjrDsl/"
+              href="https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white"
