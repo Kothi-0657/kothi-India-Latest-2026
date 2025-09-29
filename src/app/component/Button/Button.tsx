@@ -6,7 +6,13 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   processing?: boolean;
 };
 
-const Button: React.FC<ButtonProps> = ({ text, processing = false, disabled, className, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  text,
+  processing = false,
+  disabled,
+  className,
+  ...props
+}) => {
   return (
     <button
       className={`w-full py-3 font-bold rounded-xl bg-[#b04400] text-white shadow-md hover:bg-[#992f00] transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${className}`}

@@ -1,26 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 import "@/app/globals.css";
 import Popup from "../PopupBox/popup";
-import { useAppSelector } from "@/Redux/store";
+import ContactForm from "@/app/component/Form/Cxform"; // ✅ Import reusable form
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
-  const token = useAppSelector((state) => state.auth.token);
+  // (optional) if you want to check auth token later
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
 
   const navItems = [
     { tab: "Home", destination: "/" },
-    { tab: "Services", destination: "/services" },
+    { tab: "Services", destination: "/service" },
     { tab: "Deals", destination: "/deals" },
   ];
 
@@ -28,54 +27,6 @@ function Navbar() {
     setIsOpen(false);
     if (destination === "/Contact") {
       setShowPopup(true);
-    }
-  };
-
-  // ✅ Form submission handler
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccess(false);
-    setError("");
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbzD_w93Eys0tlYNV6W_FauHgZr3U7rQyDsuVGzEacZEeFAcrRZometOPjDeCT38e_Ggbg/exec",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      const result = await res.json();
-
-      if (result.status === "success") {
-        setSuccess(true);
-        form.reset();
-
-        // Auto close modal after 2s
-        setTimeout(() => {
-          setShowPopup(false);
-          setSuccess(false);
-        }, 2000);
-      } else {
-        throw new Error(result.message || "Something went wrong");
-      }
-    } catch (err: unknown) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError("Something went wrong");
-      }
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -180,73 +131,7 @@ function Navbar() {
 
       {/* Popup Modal */}
       <Popup isOpen={showPopup} onClose={() => setShowPopup(false)}>
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-center textcolor2dark">
-            Request a callback
-          </h2>
-          <p className="text-center text-gray-500 text-sm">
-            Fill the form below and our team will contact you.
-          </p>
-
-          <form className="space-y-3" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              className="w-full p-3 border rounded-lg backgroundcolorfocus"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Your Phone Number"
-              className="w-full p-3 border rounded-lg backgroundcolorfocus"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email Id"
-              className="w-full p-3 border rounded-lg backgroundcolorfocus"
-            />
-            <input
-              type="text"
-              name="city"
-              placeholder="Enter Your City"
-              className="w-full p-3 border rounded-lg backgroundcolorfocus"
-            />
-            <textarea
-              name="address"
-              placeholder="Property / Site address"
-              className="w-full p-3 border rounded-lg backgroundcolorfocus"
-              rows={4}
-            />
-            <textarea
-              name="requirements"
-              placeholder="Detail Requirements"
-              className="w-full p-3 border rounded-lg backgroundcolorfocus"
-              rows={4}
-            />
-            <button
-              type="submit"
-              className="w-full backgroundcolor2 text-white font-semibold py-3 rounded-lg backgroundcolor2hover transition-all"
-              disabled={loading}
-            >
-              {loading ? "Submitting..." : "Submit"}
-            </button>
-          </form>
-
-          {success && (
-            <p className="text-green-600 text-center font-medium">
-              ✅ Form submitted successfully! Closing...
-            </p>
-          )}
-          {error && (
-            <p className="text-red-600 text-center font-medium">
-              ⚠️ {error}
-            </p>
-          )}
-        </div>
+        <ContactForm onSuccess={() => setShowPopup(false)} />
       </Popup>
     </>
   );

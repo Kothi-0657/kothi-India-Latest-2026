@@ -1,6 +1,7 @@
+// src/app/component/popup.tsx
 "use client";
+
 import React from "react";
-import { X } from "lucide-react";
 
 type PopupProps = {
   isOpen: boolean;
@@ -9,33 +10,28 @@ type PopupProps = {
   children: React.ReactNode;
 };
 
-function Popup({ isOpen, onClose, title, children }: PopupProps) {
+export default function Popup({ isOpen, onClose, title, children }: PopupProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-50">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-fadeIn">
-        
-        {/* Close Button */}
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+      <div className="bg-white rounded-xl shadow-lg w-full max-w-lg relative p-6">
+        {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-600 hover:text-black"
+          className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
         >
-          <X size={22} />
+          ✖
         </button>
 
-        {/* Title */}
+        {/* Optional title */}
         {title && (
-          <h2 className="text-xl font-semibold mb-4 text-center">{title}</h2>
+          <h2 className="text-xl font-semibold mb-4 text-[#b04400]">{title}</h2>
         )}
 
-        {/* Content */}
-        {children}
+        {/* Body */}
+        <div>{children}</div>
       </div>
     </div>
   );
 }
-
-// ✅ Exported both ways
-export { Popup };
-export default Popup;

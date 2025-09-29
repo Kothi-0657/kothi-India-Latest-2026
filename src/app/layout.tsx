@@ -16,10 +16,8 @@ export const metadata: Metadata = {
   description: "Elevate Your Lifestyle",
   icons: {
     icon: "/favicon.ico",
-
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -30,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-      </head>      
+      </head>
       <body className={`${poppins.className}`}>
         <main className="min-h-screen w-screen pt-[75px]">
           <AppProviders>

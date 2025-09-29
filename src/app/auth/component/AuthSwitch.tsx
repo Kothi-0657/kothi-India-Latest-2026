@@ -11,12 +11,11 @@ export const IfAuthenticated = ({ children }: { children: AuthChildren }) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (auth?.token ) {
+    if (auth?.token) {
       router.push("/services");
     }
   }, [auth?.token, router]);
 
- 
   if (!auth?.token) return null;
 
   return <>{typeof children == "function" ? children(auth) : children}</>;

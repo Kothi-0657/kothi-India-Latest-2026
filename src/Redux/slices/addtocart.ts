@@ -5,7 +5,7 @@ type CartType = {
   title: string;
   serviceType?: string | null;
   quantity: number;
-  price?:number;
+  price?: number;
 };
 
 interface CartState {
@@ -22,21 +22,19 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<CartType>) => {
       const existingItem = state.cart.find(
-        (item) => item.title === action.payload.title
+        (item) => item.title === action.payload.title,
       );
 
       if (existingItem) {
-        
         existingItem.quantity += action.payload.quantity;
       } else {
-        
         state.cart.push({ ...action.payload });
       }
     },
 
     removeFromCart: (state, action: PayloadAction<string>) => {
       const existingItem = state.cart.find(
-        (item) => item.title === action.payload
+        (item) => item.title === action.payload,
       );
 
       if (existingItem) {
@@ -44,7 +42,7 @@ const cartSlice = createSlice({
           existingItem.quantity -= 1;
         } else {
           state.cart = state.cart.filter(
-            (item) => item.title !== action.payload
+            (item) => item.title !== action.payload,
           );
         }
       }
@@ -56,12 +54,10 @@ const cartSlice = createSlice({
   },
 });
 
-
 export const selectCart = (state: { cart: CartState }) => state.cart.cart;
 
 export const selectCartCount = (state: { cart: CartState }) =>
   state.cart.cart.reduce((total, item) => total + item.quantity, 0);
-
 
 export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 export const cartReducer = cartSlice.reducer;

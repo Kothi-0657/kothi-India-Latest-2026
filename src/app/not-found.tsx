@@ -1,13 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import { MoveLeft } from 'lucide-react';
-import "@/app/globals.css"
+import React from "react";
+import Link from "next/link";
+import { MoveLeft } from "lucide-react";
+import "@/app/globals.css";
 
 const Notfound = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#905635] via-[#642d0c] to-[#a4420a] flex flex-col items-center justify-center text-white px-4">
-      <h1 className="text-[8rem] font-extrabold drop-shadow-lg animate-bounce">404</h1>
-      <h2 className="text-3xl md:text-4xl font-semibold mb-4">Oops! Page Not Found</h2>
+      <h1 className="text-[8rem] font-extrabold drop-shadow-lg animate-bounce">
+        404
+      </h1>
+      <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+        Oops! Page Not Found
+      </h2>
       <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-md text-center">
         The page you’re looking for doesn’t exist or has been moved.
       </p>

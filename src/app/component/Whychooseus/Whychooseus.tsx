@@ -31,18 +31,16 @@ const reasons = [
 function WhyChooseUs() {
   return (
     <section className="relative bg-gray-50 py-24">
-      
       <div className="absolute inset-0">
         <img
           src="/building.png"
           alt="Background"
           className="w-full  h-full object-cover"
         />
-        
+
         <div className="absolute inset-0 bg-black opacity-80"></div>
       </div>
 
-      
       <div className="relative z-20 max-w-7xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
           Why Choose Us

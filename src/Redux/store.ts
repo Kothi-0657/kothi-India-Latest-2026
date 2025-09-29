@@ -9,7 +9,7 @@ import { cartReducer } from "./slices/addtocart";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["auth","cart"], 
+  whitelist: ["auth", "cart"],
 };
 
 const rootReducer = combineReducers({

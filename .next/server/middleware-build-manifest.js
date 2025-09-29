@@ -5,19 +5,19 @@ globalThis.__BUILD_MANIFEST = {
   "devFiles": [],
   "ampDevFiles": [],
   "polyfillFiles": [
-    "static/chunks/f09e5_next_dist_build_polyfills_polyfill-nomodule.js"
+    "static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js"
   ],
   "lowPriorityFiles": [],
   "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_a58d1e74._.js",
-    "static/chunks/f09e5_next_dist_compiled_react-dom_f4e17d7f._.js",
-    "static/chunks/f09e5_next_dist_compiled_next-devtools_index_30c79d34.js",
-    "static/chunks/f09e5_next_dist_compiled_45b331c2._.js",
-    "static/chunks/f09e5_next_dist_client_3897c585._.js",
-    "static/chunks/f09e5_next_dist_3409aa74._.js",
-    "static/chunks/f09e5_@swc_helpers_cjs_4cd7e11e._.js",
-    "static/chunks/Documents_Kothiwebsite_kothiindia2026_my-app_a0ff3932._.js",
-    "static/chunks/turbopack-Documents_Kothiwebsite_kothiindia2026_my-app_805c1c5b._.js"
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
+    "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
+    "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",
+    "static/chunks/node_modules_next_dist_compiled_5150ccfd._.js",
+    "static/chunks/node_modules_next_dist_client_cf1d9188._.js",
+    "static/chunks/node_modules_next_dist_b0daae9a._.js",
+    "static/chunks/node_modules_@swc_helpers_cjs_b3dc30d6._.js",
+    "static/chunks/_a0ff3932._.js",
+    "static/chunks/turbopack-_cdba956c._.js"
   ],
   "ampFirstPages": []
 };

@@ -1,38 +1,36 @@
 @import "tailwindcss";
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 @font-face {
-  font-family: 'SimpleSerenity';
-  src: url('/Simple-Serenity-Serif.ttf') format('truetype');
+  font-family: "SimpleSerenity";
+  src: url("/Simple-Serenity-Serif.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .navbar-logo {
-  font-family: 'SimpleSerenity', serif;
+  font-family: "SimpleSerenity", serif;
 }
 
-
 :root {
+  --primarybg: #1e1e1e;
+  --secondarybg: #b04400;
 
-  --primarybg: #1E1E1E; 
-  --secondarybg: #b04400 ;   
-  
-  --primarytext:#FE904E ; 
-  --primary2text:#b04400 ; 
-  --secondaryText:#1E1E1E ;  
+  --primarytext: #fe904e;
+  --primary2text: #b04400;
+  --secondaryText: #1e1e1e;
 
-  --navprimary2: #0f172b;   
-  --navsecondary2: #1c398e; 
-  --navtertiary2: #193cb8;  
+  --navprimary2: #0f172b;
+  --navsecondary2: #1c398e;
+  --navtertiary2: #193cb8;
 
   --background: #ffffff;
   --foreground: #171717;
 }
-
 
 .backgroundcolor {
   background-color: var(--primarybg);
@@ -46,15 +44,13 @@ html, body {
 
 .backgroundcolorhover:hover {
   background-color: var(--secondarybg);
-
 }
 .backgroundcolorfocus:focus {
-  outline: none; 
-  border: 1px solid var(--secondarybg); 
-  box-shadow: 0 0 10px 1px var(--secondarybg); 
-  transition: all 0.2s ease-in-out; 
+  outline: none;
+  border: 1px solid var(--secondarybg);
+  box-shadow: 0 0 10px 1px var(--secondarybg);
+  transition: all 0.2s ease-in-out;
 }
-
 
 .textcolor {
   color: var(--primarytext);
@@ -66,6 +62,3 @@ html, body {
 .secondaryTexthover:hover {
   color: var(--primary2text);
 }
-
-
-

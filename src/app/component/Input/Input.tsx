@@ -40,7 +40,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 Input.displayName = "Input";

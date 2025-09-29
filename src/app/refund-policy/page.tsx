@@ -1,67 +1,108 @@
 export default function RefundPolicyPage() {
   return (
     <div className="p-10 max-w-4xl mx-auto text-gray-800">
-      <h1 className="text-3xl font-bold mb-4">Refund Policy</h1>
-      <p>
-       Effective Date: June 2025 </p>
-<p className="mt-4">       
-At Kothi India, we value transparency and customer satisfaction. This Refund Policy outlines the conditions under which refunds are provided for our services, including:
-Home Constructions
-Home Renovations
-Plumbing
-Electrical Service
-Painting and Cleaning Services
-Carpentry Service
-Interior Design Services</p>
-<p>
-1. General Conditions for Refunds
-Refunds are applicable only when a valid cancellation or dissatisfaction request is raised as per the conditions below.
-Kothi India will process refunds only after deducting applicable administrative charges, material costs, or labor already used.
-</p>
-<p>
-2. Service Cancellation by the Customer
-Full Refund: If a cancellation is made within 12 hours of booking and no work has commenced, a full refund will be issued.
-Partial Refund: If cancellation is made after 12 hours or work has already started, a partial refund may be issued after deducting:
-Site visit or inspection charges (if applicable)
-Material costs already incurred
-Labor charges for work done
-No Refund: If the project is over 50% completed, refunds will not be applicable unless there is clear evidence of service failure.
-</p>
-<p>
-3. Service Cancellation by Kothi India
-In the rare case that Kothi India cancels a confirmed booking, a full refund will be issued, unless an alternative date or replacement service is accepted by the client.
-</p>
-<p>
-4. Non-Refundable Scenarios
-Refunds will not be processed under the following conditions:
-Delay in project completion caused by customer-side issues (site access, approvals, design changes, etc.)
-Damage caused by third-party service providers or client interference
-Dissatisfaction based on personal preferences after full service delivery
-Interior or custom-made products already manufactured/installed
-Projects abandoned by the client midway without formal notice
-</p>
-<p>
-5. How to Request a Refund
-To request a refund, please contact our support team with the following:
-Booking ID / Invoice
-Reason for the refund request
-Supporting images or documents (if applicable)</p>
-<p>📧 Email: service@kothiindia.com</p>
-<p>📞 Phone: +91 9972225551</p>
-<p>Our team will respond within 3–5 business days and initiate the refund (if eligible) within 7–10 working days to the original payment method.</p>
+      <h1 className="text-3xl font-bold mb-6">Refund Policy</h1>
+      <p className="mb-4">Effective Date: June 2025</p>
 
-<p>
-6. Mode of Refund
-All eligible refunds will be processed to the original payment method used during the transaction (UPI, Bank Transfer, etc.). We do not offer cash refunds.
-</p><p>
-7. Dispute Resolution</p><p>
-If you believe a refund was wrongly denied, you can escalate the issue by writing to support@kothiindia.com. All disputes are subject to the jurisdiction of Bangalore, Karnataka.
-</p><p>
-8. Policy Updates
-Kothi India reserves the right to modify this Refund Policy at any time. Changes will be updated on our website with a revised effective date.
-
+      <p className="mb-4">
+        At <strong>Kothi India</strong>, we value transparency and customer
+        satisfaction. This Refund Policy outlines the conditions under which
+        refunds are provided for our services, including:
       </p>
-      <p className="mt-4">Contact us at service@kothiindia.com for refund-related queries.</p>
+      <ul className="list-disc pl-6 mb-6">
+        <li>Home Constructions</li>
+        <li>Home Renovations</li>
+        <li>Plumbing & Electrical Services</li>
+        <li>Painting & Cleaning Services</li>
+        <li>Carpentry Service</li>
+        <li>Interior Design Services</li>
+      </ul>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">1. General Conditions for Refunds</h2>
+      <p className="mb-4">
+        Refunds are applicable only when a valid cancellation or dissatisfaction
+        request is raised as per the conditions below. Refunds will be processed
+        after deducting applicable administrative charges, material costs, or
+        labor already used.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">2. Service Cancellation by the Customer</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>
+          <strong>Full Refund:</strong> If cancellation is made within 12 hours
+          of booking and no work has started.
+        </li>
+        <li>
+          <strong>Partial Refund:</strong> If cancellation occurs after 12 hours
+          or once work has started, deductions will apply for:
+          <ul className="list-disc pl-6">
+            <li>Site visit or inspection charges</li>
+            <li>Material costs already incurred</li>
+            <li>Labor charges for work completed</li>
+          </ul>
+        </li>
+        <li>
+          <strong>No Refund:</strong> If the project is more than 50% completed,
+          unless there is proven service failure.
+        </li>
+      </ul>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">3. Service Cancellation by Kothi India</h2>
+      <p className="mb-4">
+        If <strong>Kothi India</strong> cancels a confirmed booking, a full
+        refund will be issued, unless the client agrees to an alternative date
+        or replacement service.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">4. Non-Refundable Scenarios</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>Delays caused by client-side issues (site access, approvals, changes).</li>
+        <li>Damage caused by third-party providers or client interference.</li>
+        <li>Dissatisfaction based on personal preference after full service delivery.</li>
+        <li>Interior/custom-made products already manufactured/installed.</li>
+        <li>Projects abandoned midway without formal notice.</li>
+      </ul>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">5. How to Request a Refund</h2>
+      <p className="mb-2">To request a refund, please provide:</p>
+      <ul className="list-disc pl-6 mb-4">
+        <li>Booking ID / Invoice</li>
+        <li>Reason for the request</li>
+        <li>Supporting images/documents (if applicable)</li>
+      </ul>
+      <p className="mb-4">
+        📧 Email: <a href="mailto:service@kothiindia.com">service@kothiindia.com</a><br />
+        📞 Phone: +91 9972225551
+      </p>
+      <p className="mb-4">
+        Our team will respond within 3–5 business days and initiate the refund
+        (if eligible) within 7–10 working days to the original payment method.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">6. Mode of Refund</h2>
+      <p className="mb-4">
+        All eligible refunds will be processed via the original payment method
+        (UPI, bank transfer, etc.). We do not offer cash refunds.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">7. Dispute Resolution</h2>
+      <p className="mb-4">
+        If you believe a refund was wrongly denied, you can escalate the issue
+        by writing to <a href="mailto:service@kothiindia.com">support@kothiindia.com</a>.  
+        All disputes are subject to the jurisdiction of Bangalore, Karnataka.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">8. Policy Updates</h2>
+      <p className="mb-4">
+        Kothi India may update this Refund Policy at any time. Updates will be
+        posted on our website with a revised effective date.
+      </p>
+
+      <h2 className="text-xl font-semibold mt-6 mb-2">9. Contact Us</h2>
+      <p>
+        📧 Email: <a href="mailto:service@kothiindia.com">service@kothiindia.com</a><br />
+        📞 Phone: +91 9972225551
+      </p>
     </div>
   );
 }

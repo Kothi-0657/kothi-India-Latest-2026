@@ -9,7 +9,7 @@ export type TAuthState = {
 
 const initialState: TAuthState = {
   user: null,
-  token: null,   // ✅ keep empty at start
+  token: null, // ✅ keep empty at start
   loading: false,
   error: null,
 };
@@ -30,9 +30,7 @@ const authSlice = createSlice({
       state.loading = false;
       state.error = null;
     },
-    addtocart:(state,action)=>{
-      
-    }
+    addtocart: (state, action) => {},
   },
 });
 

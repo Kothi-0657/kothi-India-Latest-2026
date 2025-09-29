@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 const testimonials = [
   {
     name: "Aarav Mehta",
@@ -45,12 +45,14 @@ const testimonials = [
     message:
       "Reliable, efficient, and detail-oriented. KothiIndia provides high-quality results and truly understands our requirements.",
     avatar: "https://xsgames.co/randomusers/avatar.php?g=female",
-  }
+  },
 ];
 
-
-
-export const InfiniteMovingTestimonials = ({ interval = 4000 }: { interval?: number }) => {
+export const InfiniteMovingTestimonials = ({
+  interval = 4000,
+}: {
+  interval?: number;
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [chunkSize, setChunkSize] = useState(3);
 
@@ -80,23 +82,25 @@ export const InfiniteMovingTestimonials = ({ interval = 4000 }: { interval?: num
   }, [slides, interval]);
 
   return (
-    <div className="relative overflow-hidden w-full"  >
-
+    <div className="relative overflow-hidden w-full">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-      
         {slides.map((slide, slideIndex) => (
           <div key={slideIndex} className="min-w-full flex gap-4">
             {slide.map((t, idx) => (
               <div key={idx} className="w-full px-2">
                 <div className="bg-white p-6 rounded-2xl  border-[2px] border-[#b04400] flex flex-col items-center text-center">
-                 
-                  <p className="text-[#331b0d] italic mb-4"><FaQuoteLeft className="text-[#b04400]" />{t.message}<FaQuoteRight className="text-[#b04400]"/> </p>
-                  <h3 className="text-lg font-semibold text-[#b04400]">{t.name}</h3>
+                  <p className="text-[#331b0d] italic mb-4">
+                    <FaQuoteLeft className="text-[#b04400]" />
+                    {t.message}
+                    <FaQuoteRight className="text-[#b04400]" />{" "}
+                  </p>
+                  <h3 className="text-lg font-semibold text-[#b04400]">
+                    {t.name}
+                  </h3>
                   <p className="text-sm text-[#b04400]">{t.role}</p>
-                  
                 </div>
               </div>
             ))}
